@@ -38,7 +38,7 @@ router.get('/getRecipe/:id', async (req, res) => {
   res.json(data)
 })
 
-api.use('/', router)
+api.use('/.netlify/functions/api', router)
 
 api.listen(8000, () => console.log(`Server is running on ${PORT} `))
 export const handler = serverless(api)
