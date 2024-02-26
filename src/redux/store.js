@@ -10,4 +10,11 @@ const store = configureStore({
   reducer: recipeReducer, // Combine all your reducers here
 })
 
+export function setupStore(preloadedState) {
+  return configureStore({
+    reducer: recipeReducer,
+    preloadedState,
+  })
+}
+
 export default store

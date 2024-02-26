@@ -21,6 +21,7 @@ const RecipeDetail = () => {
         <img
           src={recipe?.image}
           className="object-cover w-full h-[400px] rounded-none lg:rounded-lg lg:mx-6 lg:my-4"
+          aria-label="recipe-image"
         />
         <div className="flex flex-col  space-y-6  lg:mx-6 lg:my-4 bg-white rounded-lg p-8 w-full dark:bg-gray-800">
           <p className="text-3xl dark:text-white">{recipe?.title}</p>

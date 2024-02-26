@@ -19,6 +19,7 @@ export const getSearchedRecipes = createAsyncThunk(
     // We send the initial data to the fake API server
     const response = await getRecipes(query)
     // The response includes the complete post object, including unique ID
+
     return response.results
   }
 )
@@ -30,6 +31,7 @@ export const getSearchedRecipeById = createAsyncThunk(
     // We send the initial data to the fake API server
     const response = await getRecipeById(id)
     // The response includes the complete post object, including unique ID
+
     return response[0]
   }
 )

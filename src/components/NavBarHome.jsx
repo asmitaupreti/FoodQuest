@@ -18,14 +18,24 @@ const NavBarHome = () => {
           Get ready to dive into the realm of food
         </p>
         <div className="flex space-x-2  p-2">
-          <div className="bg-black rounded-lg p-2" onClick={lightTheme}>
+          <div
+            role="button"
+            className="bg-black rounded-lg p-2"
+            aria-label="Activate light theme"
+            onClick={lightTheme}
+          >
             <FaSun
               className={`${
                 theme == 'light' ? 'text-orange-700' : 'text-white'
               }`}
             />
           </div>
-          <div className="bg-black rounded-lg p-2" onClick={darkTheme}>
+          <div
+            role="button"
+            className="bg-black rounded-lg p-2"
+            aria-label="Activate dark theme"
+            onClick={darkTheme}
+          >
             <FaMoon
               className={`${
                 theme == 'dark' ? 'text-orange-700' : 'text-white'

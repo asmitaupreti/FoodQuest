@@ -10,6 +10,8 @@ const SearchSection = ({ search, setSearch, searchRecipe }) => {
       <SearchBar search={search} setSearch={setSearch} />
       <FilterButton selectedFilter={selectedFilter} setFilter={setFilter} />
       <div
+        role="button"
+        aria-label="Search for recipe"
         className="bg-black rounded-lg  h-14 p-4 cursor-pointer "
         onClick={() => searchRecipe(selectedFilter)}
       >

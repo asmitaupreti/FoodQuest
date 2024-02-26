@@ -13,6 +13,8 @@ export const FilterButton = ({ selectedFilter, setFilter }) => {
       <div
         className="bg-black cursor-pointer rounded-lg h-14 p-4 flex items-center justify-center "
         onClick={toggleFilterList}
+        role="button"
+        aria-label="Search by filter"
       >
         <p className="hidden lg:block text-white mr-2">Search By </p>
         <IoIosArrowDown className="text-white h-6 w-6" />
@@ -29,12 +31,14 @@ export const FilterButton = ({ selectedFilter, setFilter }) => {
             <li
               className="px-3 py-1 hover:bg-slate-50 cursor-pointer"
               onClick={() => [setFilter('recipe'), toggleFilterList()]}
+              data-testid="filter-by-recipe"
             >
               Recipe
             </li>
             <li
               className="px-3 py-1 hover:bg-slate-50  cursor-pointer"
               onClick={() => [setFilter('ingredient'), toggleFilterList()]}
+              data-testid="filter-by-ingredient"
             >
               Ingredient
             </li>
