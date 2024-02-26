@@ -35,6 +35,11 @@ To configure the application with your Spoonacular API key, follow these steps:
 
 2. Add your Spoonacular API key to the `.env` file: API_KEY=test1234
 
+## Testing
+FoodQuest is equipped with Vitest and React Testing Library for unit and component testing to ensure the reliability and stability of the application. To run the tests:
+
+Execute npm run test 
+
 ## Usage
 
 1. Enter the name of the dish or ingredients you want to search for in the search bar.
