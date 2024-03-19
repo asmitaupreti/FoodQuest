@@ -32,7 +32,7 @@ export const getSearchedRecipeById = createAsyncThunk(
     const response = await getRecipeById(id)
     // The response includes the complete post object, including unique ID
 
-    return response[0]
+    return response.results
   }
 )
 
@@ -43,7 +43,7 @@ export const getSearchedRecipeByIngredient = createAsyncThunk(
     // We send the initial data to the fake API server
     const response = await getRecipeByIngredient(query)
     // The response includes the complete post object, including unique ID
-    return response
+    return response.results
   }
 )
 
@@ -63,7 +63,7 @@ const recipeSlice = createSlice({
           getSearchedRecipeByIngredient.pending,
           getSearchedRecipeById.pending
         ),
-        (state, action) => {
+        (state) => {
           state.status = 'loading'
         }
       )
